@@ -37,14 +37,23 @@ function UserCard({
     <article className='userCard'>
       <div className='imageWrapper'>
         <img src={userImg} alt={userName} className='userImg' />
+        <h2 className='userName'>{userName}</h2>
+        <p className='userNick'>{userNick}</p>
       </div>
-      <h2 className='userName'>{userName}</h2>
-      <p className='userNick'>{userNick}</p>
       <button className='addButton'>+</button>
       <div className='userNumbers'>
-        <p className='userTweetQty'>Tweets {userTweetQty}</p>
-        <p className='userFolowing'>Following {userFolowing}</p>
-        <p className='userFolowers'>Followers {userFolowers}</p>
+        <div className='statItem'>
+          <p className='statLabel'>Tweets</p>
+          <p className='statNumber'>{userTweetQty}</p>
+        </div>
+        <div className='statItem'>
+          <p className='statLabel'>Following</p>
+          <p className='statNumber'>{userFolowing}</p>
+        </div>
+        <div className='statItem'>
+          <p className='statLabel'>Followers</p>
+          <p className='statNumber'>{userFolowers}</p>
+        </div>
       </div>
     </article>
   );
