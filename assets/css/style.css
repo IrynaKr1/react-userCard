@@ -24,7 +24,7 @@ body {
   border-radius: 10px;
   background-color: #f7f2f2;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  position: relative
+  position: relative;
 }
 
 .imageWrapper {
@@ -44,7 +44,7 @@ body {
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
-  filter: sepia(20%) saturate(80%);
+  filter: sepia(70%) saturate(50%);
 }
 
 .userName {
@@ -86,27 +86,27 @@ body {
 }
 
 .userNumbers {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 2rem;
-    padding-bottom: 15px;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 2rem;
+  padding-bottom: 15px;
+  width: 100%;
 }
 
 .statItem {
-    text-align: center;
+  text-align: center;
 }
 
 .statLabel {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0 0 5px 0;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 5px 0;
 }
 
 .statNumber {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--main-color);
-    margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0;
 }
