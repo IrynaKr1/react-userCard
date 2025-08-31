@@ -34,14 +34,18 @@ function UserCard({
   userFolowers,
 }) {
   return (
-    <article className="userCard">
-      <img src={userImg} alt={userName} className="userImg"/>
-      <h2 className="userName">{userName}</h2>
-      <p className="userNick">{userNick}</p>
-      <button className="addButton">+</button>
-      <p className="userTweetQty">{userTweetQty}</p>
-      <p className="userFolowing">{userFolowing}</p>
-      <p className="userFolowers">{userFolowers}</p>
+    <article className='userCard'>
+      <div className='imageWrapper'>
+        <img src={userImg} alt={userName} className='userImg' />
+      </div>
+      <h2 className='userName'>{userName}</h2>
+      <p className='userNick'>{userNick}</p>
+      <button className='addButton'>+</button>
+      <div className='userNumbers'>
+        <p className='userTweetQty'>Tweets {userTweetQty}</p>
+        <p className='userFolowing'>Following {userFolowing}</p>
+        <p className='userFolowers'>Followers {userFolowers}</p>
+      </div>
     </article>
   );
 }

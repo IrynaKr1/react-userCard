@@ -1,0 +1,46 @@
+:root {
+  --main-font: Noto Sans, sans-serif;
+  --main-color: #3d3535;
+  --secondary-color: #f7f2f2;
+}
+
+body {
+  font-family: var(--main-font);
+  padding: 20px;
+  background-color: #e6d9d9;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+.userCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondary-color);
+  min-width: 300px;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #f7f2f2;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 320px;
+  width: 100%;
+  background: linear-gradient(to bottom, #9ca3af, #6b7280);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.userImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  filter: sepia(20%) saturate(80%);
+}
