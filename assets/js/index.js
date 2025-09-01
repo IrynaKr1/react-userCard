@@ -36,8 +36,14 @@ function UserCard({
   userFolowers,
   userGender,
 }) {
+  const [followersCount, setFollowersCount] = React.useState(userFolowers);
+
   const buttonColor = {
     backgroundColor: userGender ? '#4461efff' : '#ef4444',
+  };
+
+  const clickHandler = () => {
+    setFollowersCount((prevCount) => prevCount + 1);
   };
 
   return (
@@ -47,7 +53,7 @@ function UserCard({
         <h2 className='userName'>{userName}</h2>
         <p className='userNick'>{userNick}</p>
       </div>
-      <button className='addButton' style={buttonColor}>
+      <button className='addButton' style={buttonColor} onClick={clickHandler}>
         +
       </button>
       <div className='userNumbers'>
@@ -61,7 +67,7 @@ function UserCard({
         </div>
         <div className='statItem'>
           <p className='statLabel'>Followers</p>
-          <p className='statNumber'>{userFolowers}</p>
+          <p className='statNumber'>{followersCount}</p>
         </div>
       </div>
     </article>
