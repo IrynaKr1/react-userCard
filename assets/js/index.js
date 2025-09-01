@@ -10,6 +10,7 @@ function App() {
     tweetsQty: 1337,
     folowing: 561,
     folowers: 718,
+    isMale: false,
   };
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         userTweetQty={user.tweetsQty}
         userFolowing={user.folowing}
         userFolowers={user.folowers}
+        userGender={user.isMale}
       />
     </>
   );
@@ -32,7 +34,12 @@ function UserCard({
   userTweetQty,
   userFolowing,
   userFolowers,
+  userGender,
 }) {
+  const buttonColor = {
+    backgroundColor: userGender ? '#4461efff' : '#ef4444',
+  };
+
   return (
     <article className='userCard'>
       <div className='imageWrapper'>
@@ -40,7 +47,9 @@ function UserCard({
         <h2 className='userName'>{userName}</h2>
         <p className='userNick'>{userNick}</p>
       </div>
-      <button className='addButton'>+</button>
+      <button className='addButton' style={buttonColor}>
+        +
+      </button>
       <div className='userNumbers'>
         <div className='statItem'>
           <p className='statLabel'>Tweets</p>
